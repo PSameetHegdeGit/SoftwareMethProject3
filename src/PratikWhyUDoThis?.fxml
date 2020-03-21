@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="233.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" />
+      <TextField alignment="TOP_LEFT" layoutX="327.0" layoutY="15.0" />
+      <Text layoutX="233.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
+      <TextField alignment="CENTER" layoutX="327.0" layoutY="50.0" />
+      <Text layoutX="185.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Credits" />
+      <TextField layoutX="327.0" layoutY="89.0" />
+      <AnchorPane layoutX="1.0" layoutY="149.0" prefHeight="426.0" prefWidth="362.0">
+         <children>
+            <VBox layoutX="35.0" layoutY="31.0" prefHeight="176.0" prefWidth="134.0">
+               <children>
+                  <RadioButton contentDisplay="CENTER" mnemonicParsing="false" text="Instate">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" text="Outstate">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="International">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </RadioButton>
+               </children>
+            </VBox>
+            <VBox layoutX="198.0" layoutY="63.0" prefHeight="151.0" prefWidth="134.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
