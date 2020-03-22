@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="851.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="851.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
       <GridPane prefHeight="169.0" prefWidth="820.0">
         <columnConstraints>
@@ -88,7 +88,7 @@
             </GridPane>
             <VBox layoutX="570.0" prefHeight="271.0" prefWidth="269.0">
                <children>
-                  <Button alignment="TOP_CENTER" contentDisplay="CENTER" minWidth="-Infinity" mnemonicParsing="false" prefHeight="27.0" prefWidth="76.0" text="Add">
+                  <Button alignment="TOP_CENTER" contentDisplay="CENTER" minWidth="-Infinity" mnemonicParsing="false" prefHeight="27.0" prefWidth="76.0" text="Add" fx:id="add" onAction="#clickAdd">
                      <VBox.margin>
                         <Insets bottom="30.0" left="100.0" right="30.0" top="30.0" />
                      </VBox.margin>
