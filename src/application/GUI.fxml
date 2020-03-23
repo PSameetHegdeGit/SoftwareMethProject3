@@ -68,7 +68,7 @@
                      </toggleGroup></RadioButton>
                   <RadioButton fx:id="outstate" mnemonicParsing="false" onAction="#clickRadioButton" text="OUTSTATE" toggleGroup="$stateLevel" GridPane.rowIndex="1" />
                   <RadioButton fx:id="international" mnemonicParsing="false" onAction="#clickRadioButton" text="INTERNATIONAL" toggleGroup="$stateLevel" GridPane.rowIndex="2" />
-                  <TextField prefHeight="27.0" prefWidth="133.0" promptText="Amount of Funding" GridPane.columnIndex="2" />
+                  <TextField fx:id="fundingAmount" prefHeight="27.0" prefWidth="133.0" promptText="Amount of Funding" GridPane.columnIndex="2" />
                   <CheckBox fx:id="tristateStudent" mnemonicParsing="false" text="Tri-State Student" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="15.0" />
@@ -96,12 +96,12 @@
                         <Insets bottom="30.0" left="100.0" right="30.0" top="30.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="75.0" text="Remove">
+                  <Button fx:id="remove" mnemonicParsing="false" onAction="#clickRemove" prefHeight="27.0" prefWidth="75.0" text="Remove">
                      <VBox.margin>
                         <Insets bottom="30.0" left="100.0" top="30.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" text="Print">
+                  <Button fx:id="print" mnemonicParsing="false" onAction="#clickPrint" prefHeight="27.0" prefWidth="74.0" text="Print">
                      <VBox.margin>
                         <Insets bottom="30.0" left="100.0" right="30.0" top="30.0" />
                      </VBox.margin>
@@ -112,6 +112,6 @@
             <Separator layoutX="-1.0" layoutY="270.0" prefHeight="0.0" prefWidth="835.0" />
          </children>
       </AnchorPane>
-      <TextField layoutX="25.0" layoutY="470.0" prefHeight="348.0" prefWidth="781.0" />
+      <TextField fx:id="output" layoutX="25.0" layoutY="470.0" prefHeight="348.0" prefWidth="781.0" />
    </children>
 </AnchorPane>
