@@ -6,13 +6,13 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="851.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
@@ -48,7 +48,7 @@
          </children>
       </GridPane>
       <Separator layoutY="169.0" prefHeight="11.0" prefWidth="841.0" />
-      <AnchorPane layoutY="175.0" prefHeight="261.0" prefWidth="841.0">
+      <AnchorPane layoutX="2.0" layoutY="175.0" prefHeight="261.0" prefWidth="841.0">
          <children>
             <GridPane layoutX="52.0" layoutY="39.0" prefHeight="201.0" prefWidth="453.0">
               <columnConstraints>
@@ -62,21 +62,24 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <RadioButton mnemonicParsing="false" text="INSTATE" />
-                  <RadioButton mnemonicParsing="false" text="OUTSTATE" GridPane.rowIndex="1" />
-                  <RadioButton mnemonicParsing="false" text="INTERNATIONAL" GridPane.rowIndex="2" />
+                  <RadioButton fx:id="instate" mnemonicParsing="false" onAction="#clickRadioButton" text="INSTATE">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="stateLevel" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="outstate" mnemonicParsing="false" onAction="#clickRadioButton" text="OUTSTATE" toggleGroup="$stateLevel" GridPane.rowIndex="1" />
+                  <RadioButton fx:id="international" mnemonicParsing="false" onAction="#clickRadioButton" text="INTERNATIONAL" toggleGroup="$stateLevel" GridPane.rowIndex="2" />
                   <TextField prefHeight="27.0" prefWidth="133.0" promptText="Amount of Funding" GridPane.columnIndex="2" />
-                  <CheckBox mnemonicParsing="false" text="Tri-State Student" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <CheckBox fx:id="tristateStudent" mnemonicParsing="false" text="Tri-State Student" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Funding" GridPane.columnIndex="1">
+                  <CheckBox fx:id="funding" mnemonicParsing="false" text="Funding" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Exchange Student" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <CheckBox fx:id="exchangeStudent" mnemonicParsing="false" text="Exchange Student" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
@@ -88,7 +91,7 @@
             </GridPane>
             <VBox layoutX="570.0" prefHeight="271.0" prefWidth="269.0">
                <children>
-                  <Button alignment="TOP_CENTER" contentDisplay="CENTER" minWidth="-Infinity" mnemonicParsing="false" prefHeight="27.0" prefWidth="76.0" text="Add" fx:id="add" onAction="#clickAdd">
+                  <Button fx:id="add" alignment="TOP_CENTER" contentDisplay="CENTER" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickAdd" prefHeight="27.0" prefWidth="76.0" text="Add">
                      <VBox.margin>
                         <Insets bottom="30.0" left="100.0" right="30.0" top="30.0" />
                      </VBox.margin>
