@@ -25,7 +25,9 @@ public class StudentList {
 	 * This method adds a student to the list if they are not already in the list
 	 * @param s  Student object to be added
 	 */
-	public void add(Student s) {
+	public String add(Student s) {
+		String addString = new String();
+		
 		if(find(s) == -1) {
 			int i = 0;
 			try {
@@ -42,8 +44,10 @@ public class StudentList {
 		}
 		else {
 			System.out.println("\nCannot Add! student already in list");
+			addString = addString + "\nCannot Add! student already in list";
 		}
-			
+		
+		return addString;
 		
 		
 	}
@@ -52,11 +56,14 @@ public class StudentList {
 	 * This method removes a student from the list if the student is present
 	 * @param s  Student to be removed from list
 	 */
-	public void remove(Student s) {
+	public String remove(Student s) {
+		
+		String removeString = new String("");
 		
 		 if (isEmpty()) {
 			   System.out.println("\nList is empty!");
-			   return;
+			   removeString = removeString + "\nList is empty!";
+			   return removeString;
 		   }
 		   else {
 			   int studentIndex = find(s);
@@ -66,25 +73,31 @@ public class StudentList {
 				   numStudents--;
 				   
 				   System.out.println(s.toString() + " has been unenrolled.");
+				   removeString = removeString + s.toString() + " has been unenrolled.";
 				   
-				   return;
+				   return removeString;
 			   }
 		   }
 		   System.out.println(s.toString() + " is not enrolled.");
-	       return;
+		   removeString = removeString + s.toString() + " is not enrolled.";
+	       return removeString;
 	}
 	
 	/**
 	 * This method prints all students currently on the list and their tuitions
 	 */
-	public void print() {
+	public String print() {
+		
+		String printString = new String();
 		
 		if(numStudents == 0) {
 			System.out.println("List is empty");
-			return;
+			printString = printString + "List is empty";
+			return printString;
 		}
  
 		System.out.println("\nWe have the following Students:\n");
+		printString = printString + "\nWe have the following Students:\n";
 
 		for(int i = 0; i < numStudents; i++) {
 			  
@@ -92,10 +105,15 @@ public class StudentList {
 			int tuitionDue = ((Student)list[i]).tuitionDue();   
 			  
 			  System.out.println(student + " " + "tuition due: " + tuitionDue);
+			  printString = printString + student + " " + "tuition due: " + tuitionDue + "\n";
 		  }
 		
-		System.out.println("\n--End of List--"); 
+		System.out.println("--End of List--"); 
+		printString = printString + "--End of List--";
+		
+		return printString;
 	}
+	
 	
 	/**
 	 * This method finds a student by comparing first name and last name of student with list[i] first name and last name

@@ -5,6 +5,7 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -28,19 +29,19 @@
         </rowConstraints>
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" GridPane.halignment="RIGHT" />
-            <TextField prefHeight="27.0" prefWidth="625.0" GridPane.columnIndex="1">
+            <TextField fx:id="firstName" prefHeight="27.0" prefWidth="625.0" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets left="100.0" right="100.0" />
                </GridPane.margin>
             </TextField>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
-            <TextField prefHeight="17.0" prefWidth="591.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="lastName" prefHeight="17.0" prefWidth="591.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="100.0" right="100.0" />
                </GridPane.margin>
             </TextField>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Credits" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-            <TextField prefHeight="27.0" prefWidth="651.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TextField fx:id="credit" prefHeight="27.0" prefWidth="651.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="100.0" right="100.0" />
                </GridPane.margin>
@@ -112,6 +113,6 @@
             <Separator layoutX="-1.0" layoutY="270.0" prefHeight="0.0" prefWidth="835.0" />
          </children>
       </AnchorPane>
-      <TextField fx:id="output" layoutX="25.0" layoutY="470.0" prefHeight="348.0" prefWidth="781.0" />
+      <TextArea fx:id="output" layoutX="37.0" layoutY="467.0" prefHeight="336.0" prefWidth="764.0" />
    </children>
 </AnchorPane>

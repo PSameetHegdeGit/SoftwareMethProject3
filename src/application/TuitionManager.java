@@ -108,7 +108,7 @@ public class TuitionManager {
 	 * It sets the student's information and calls a method to add the student to the list.
 	 * @param tokens user input to be set as student information
 	 */
-	private void addInternational(String[] tokens) {
+	 void addInternational(String[] tokens) {
 		String first_name = tokens[1];
 		String last_name = tokens[2];
 		int credit = 1;
@@ -154,7 +154,7 @@ public class TuitionManager {
 	 * It sets the student's information and calls a method to add the student to the list.
 	 * @param tokens user input to be set as student information
 	 */
-	private void addOutstate(String[] tokens) {		
+	void addOutstate(String[] tokens) {		
 		String fname = tokens[1];
 		String lname = tokens[2];
 		int credit;
@@ -200,7 +200,7 @@ public class TuitionManager {
 	 * It sets the student's information and calls a method to add the student to the list.
 	 * @param tokens user input to be set as student information
 	 */
-	private void addInstate(String[] tokens) {
+	void addInstate(String[] tokens) {
 		
 		String fname = tokens[1];
 		String lname = tokens[2];
@@ -236,10 +236,10 @@ public class TuitionManager {
 	}
 
 	/**
-	 * This method sets name of student inputted by user and calls method to remove the student
+	 * This method sets name of student inputed by user and calls method to remove the student
 	 * @param tokens  to be set as student name for removal
 	 */
-	private void remove (String[] tokens) {
+	void remove (String[] tokens) {
 		
 		String fname = tokens[1];
 		String lname = tokens[2];
